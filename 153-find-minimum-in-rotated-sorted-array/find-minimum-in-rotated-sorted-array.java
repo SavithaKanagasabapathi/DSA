@@ -1,6 +1,6 @@
 class Solution {
     public int findMin(int[] nums) {
-        //TC-O(n) and SC-O(1)
+        //TC-O(logn) and SC-O(1)
         //POR-Point of Rotation or min num
         //Rule: Uphill values be greater than index 0 and downhill will be lesser than index 0
         int left = 0, right = nums.length - 1, result = nums[0];
@@ -14,7 +14,7 @@ class Solution {
             }
         }
         return result;
-        //TC-O(n) and SC-O(1)
+        //TC-O(logn) and SC-O(1)
         // int left = 0, right = nums.length - 1;
         // while (left < right) {//find index where left and right same so not <equals
         //     int mid = left + (right - left) / 2;
