@@ -2,6 +2,7 @@ class Solution {
     //TC-O(N) and SC-O(N)
     //two-pass greedy - left-right and right-left
     //no one will ask 1 rating gets same as 2 rating, as long as 2 rules obeyed
+    //same way no one will ask, if same rating children gets different candies
     public int candy(int[] ratings) {
         int n = ratings.length, result = 0;
         int[] candy = new int[n];
