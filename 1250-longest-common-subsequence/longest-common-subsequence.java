@@ -24,7 +24,7 @@ class Solution {
         //Every row starts with 0, so there's i-1 be 0, so keeping prevI as 0 before every j starts
         //Storing old i-1 values as temp and giving to prevI after setting new dp[j]
 
-        //TC-O(M.N) and SC-O(M.N)
+        //TC-O(M.N) and SC-O(Min(M.N))
         int m = text1.length(), n = text2.length();
         if (m < n) {
             return longestCommonSubsequence(text2, text1);
