@@ -50,9 +50,11 @@ class DetectSquares {
             int[] possibleX = { x + dist, x - dist };
             for (int xs : possibleX) {
                 int count1 = yMap.get(ys);//11,2
-                int count2 = xMap.getOrDefault(xs, new HashMap<>()).getOrDefault(ys, 0);//3,2 and 
-                int count3 = xMap.getOrDefault(xs, new HashMap<>()).getOrDefault(y, 0);
+                int count2 = xMap.getOrDefault(xs, new HashMap<>()).getOrDefault(ys, 0);//3,2 and 19,2 
+                int count3 = xMap.getOrDefault(xs, new HashMap<>()).getOrDefault(y, 0);//3,10 and 19,10
                 count += count1 * count2 * count3;
+                //if freq of any point is 2, we can construct 2 squares 
+                //duplicate points allowed
             }
         }
         return count;
