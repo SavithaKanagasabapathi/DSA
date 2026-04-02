@@ -1,6 +1,6 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        //TC-O() and SC-O()
+        //TC-O(m+n) and SC-O(1)
 
         int i = m - 1, j = n - 1, k = m + n - 1;//elements position
         //ascending order with duplicates = non-decreasing
