@@ -5,16 +5,15 @@ class Solution {
         for (int pile : piles) {
             right = Math.max(right, pile);
         }
-        while (left <= right) {
-            int midSpeed = left + (right - left) / 2;
-            if (canEat(piles, h, midSpeed)) {
-                speed = midSpeed;//can eat but wait for min
-                right = midSpeed - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (canEat(piles, h, mid)) {
+                right = mid;//can eat but wait for min
             } else {
-                left = midSpeed + 1;
+                left = mid + 1;
             }
         }
-        return speed;
+        return right;//return any left or right because while loop stops if left=right
     }
 
     public boolean canEat(int[] piles, int hour, int speed) {
@@ -27,6 +26,6 @@ class Solution {
                 return false;
             }
         }
-        return true;
+        return totalTime <= hour;
     }
 }
