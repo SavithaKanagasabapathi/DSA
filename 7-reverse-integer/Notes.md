@@ -1,1 +1,0 @@
-<h2>reverse-integer Notes</h2><hr>[ Time taken: 3m 57s ]
